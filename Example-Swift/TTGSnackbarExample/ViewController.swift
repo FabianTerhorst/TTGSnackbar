@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
 
-    @IBAction func show(sender: UIButton) {
+    @IBAction func show(_ sender: UIButton) {
         let snackbar: TTGSnackbar = TTGSnackbar.init(message: messageTextField.text!, duration: durationTypes[durationSegmented.selectedSegmentIndex])
         
         // Change the left padding
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
         snackbar.show()
     }
 
-    @IBAction func showWithAction(sender: UIButton) {
+    @IBAction func showWithAction(_ sender: UIButton) {
         outputLabel?.text = "";
         let snackbar: TTGSnackbar = TTGSnackbar.init(message: messageTextField.text!, duration: durationTypes[durationSegmented.selectedSegmentIndex],
                 actionText: actionTextField.text!, actionBlock: { (snackbar) in self.outputLabel?.text = "Click action !" })
@@ -63,7 +63,7 @@ class ViewController: UIViewController {
         snackbar.show()
     }
 
-    @IBAction func showWithActionAndDismissManually(sender: UIButton) {
+    @IBAction func showWithActionAndDismissManually(_ sender: UIButton) {
         outputLabel?.text = "";
         let snackbar: TTGSnackbar = TTGSnackbar.init(message: messageTextField.text!, duration: TTGSnackbarDuration.Forever,
                 actionText: actionTextField.text!) {
@@ -85,7 +85,7 @@ class ViewController: UIViewController {
         snackbar.show()
     }
     
-    @IBAction func showWithTwoActions(sender: UIButton) {
+    @IBAction func showWithTwoActions(_ sender: UIButton) {
         let snackbar: TTGSnackbar = TTGSnackbar.init(message: "Two actions !", duration: durationTypes[durationSegmented.selectedSegmentIndex])
         
         // Action 1
@@ -102,7 +102,7 @@ class ViewController: UIViewController {
         snackbar.show()
     }
     
-    @IBAction func showWithIconImage(sender: UIButton) {
+    @IBAction func showWithIconImage(_ sender: UIButton) {
         let snackbar: TTGSnackbar = TTGSnackbar.init(message: messageTextField.text!, duration: durationTypes[durationSegmented.selectedSegmentIndex])
         
         // Add icon image
